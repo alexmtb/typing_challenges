@@ -1,8 +1,12 @@
-from constants import ___
 
 
-def calculate_total_spent_for_user(user: ___) -> ___:
-    pass
+def calculate_total_spent_for_user(user: tuple[str, int, list[int]]) -> int:
+    """Calculate the total sum of purhcases."""
+    if isinstance(user, tuple) and len(user) == 3:
+        _, _, purchase_sum = user
+        if isinstance(purchase_sum, list):
+            return sum(purchase_sum)
+    return 0
 
 
 if __name__ == "__main__":

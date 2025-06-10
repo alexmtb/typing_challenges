@@ -1,8 +1,11 @@
-from constants import ___
+# from constants import ___
 
 
-def is_recovery_code_correct(code: ___, user_codes: ___) -> ___:
-    pass
+def is_recovery_code_correct(code: str, user_codes: list[str]) -> bool:
+    """Check if recovery code is in user codes."""
+    if isinstance(code, str) and isinstance(user_codes, list):
+        return code in user_codes
+    return False
 
 
 if __name__ == "__main__":
