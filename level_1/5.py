@@ -1,8 +1,14 @@
-from constants import ___
+# from constants import ___
 
 
-def is_correct_email(raw_email: ___) -> ___:
-    pass
+def is_correct_email(raw_email: str) -> bool:
+    '''Check if the input email is correct.'''
+    if '@' not in raw_email:
+        return False
+    if not raw_email.endswith('.com'):
+        return False
+    
+    return True
 
 
 if __name__ == "__main__":
