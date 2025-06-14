@@ -1,8 +1,10 @@
-from constants import ___
+from typing import Union
 
-
-def stringify(value: ___) -> ___:
-    pass
+def stringify(value: Union[None, int, float, str]) -> str:
+    try:
+        return str(value)
+    except Exception as e:
+        return str(e)
 
 
 if __name__ == "__main__":
