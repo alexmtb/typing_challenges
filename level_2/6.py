@@ -1,8 +1,10 @@
-from constants import ___
+from typing import Union
 
-
-def is_name_male(name: ___, name_gender_map: ___) -> ___:
-    pass
+def is_name_male(name: str, name_gender_map: dict[str, bool]) -> Union[None, bool]:
+    """Check name's gender."""
+    if isinstance(name, str) and isinstance(name_gender_map, dict):
+        return name_gender_map.get(name, None)
+    return None
 
 
 if __name__ == "__main__":

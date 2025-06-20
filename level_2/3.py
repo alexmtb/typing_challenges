@@ -1,10 +1,15 @@
 import decimal
+from typing import Union
 
-from constants import ___
 
-
-def get_transaction_amount(transaction_id: ___, transactions_amounts_map: ___) -> ___:
-    pass
+def get_transaction_amount(
+        transaction_id: int, transactions_amounts_map: dict[int, decimal.Decimal]
+    ) -> Union[None, decimal.Decimal]:
+    """Get the amount of a transaction by ID."""
+    if transaction_id in transactions_amounts_map:
+        return transactions_amounts_map[transaction_id]
+    
+    return None
 
 
 if __name__ == "__main__":
