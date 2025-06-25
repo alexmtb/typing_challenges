@@ -1,5 +1,8 @@
+from typing import TypeAlias
 
-def get_current_user() -> tuple[str, int, str]:
+User: TypeAlias = tuple[str, int, str]
+
+def get_current_user() -> User:
     """Get the current user information."""
     return "Ilya Lebedev", 33, "melevir@gmail.com"
 

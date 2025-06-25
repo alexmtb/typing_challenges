@@ -1,9 +1,10 @@
-from typing import Any
+from typing import TypeAlias
 
+UserSpent: TypeAlias = tuple[str, int, list[int]]
 
 def calculate_total_spent_for_users(
         users_ids: set[int],
-        users_ids_to_users_map: dict[int, Any]
+        users_ids_to_users_map: dict[int, UserSpent]
     ) -> int:
     pass
 

@@ -1,9 +1,11 @@
 import datetime
+from typing import TypeAlias
 
+Receipt: TypeAlias = tuple[int, datetime.date, list[tuple[str, int, float]]]
 
 def parse_receipt(
         raw_receipt: str
-    ) -> tuple[int, datetime.date, list[tuple[str, int, float]]]:
+    ) -> Receipt:
     pass
 
 
