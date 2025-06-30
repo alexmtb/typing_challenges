@@ -1,8 +1,8 @@
-from constants import ___
+BANNED_USERS = {167, 921}
 
-
-def ban_users(users_ids: ___) -> ___:
-    pass
+def ban_users(users_ids: set[int]) -> int:
+    """Length of the set of banned users."""
+    return len(users_ids & BANNED_USERS)
 
 
 if __name__ == "__main__":

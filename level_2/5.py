@@ -1,8 +1,10 @@
-from constants import ___
+from typing import TypeAlias
 
+User: TypeAlias = tuple[str, int, str]
 
-def get_current_user() -> ___:
-    pass
+def get_current_user() -> User:
+    """Get the current user information."""
+    return "Ilya Lebedev", 33, "melevir@gmail.com"
 
 
 if __name__ == "__main__":
