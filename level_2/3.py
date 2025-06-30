@@ -5,7 +5,7 @@ from typing import Union
 def get_transaction_amount(
         transaction_id: int,
         transactions_amounts_map: dict[int, decimal.Decimal]
-    ) -> None | decimal.Decimal:
+    ) -> decimal.Decimal | None:
     
     """Get the amount of a transaction by ID."""
     if transaction_id in transactions_amounts_map:

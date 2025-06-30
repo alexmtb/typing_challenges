@@ -1,7 +1,8 @@
 import datetime
 from typing import TypeAlias
 
-Receipt: TypeAlias = tuple[int, datetime.date, list[tuple[str, int, float]]]
+CheckItem: TypeAlias = tuple[str, int, float]
+Receipt: TypeAlias = tuple[int, datetime.date, list[CheckItem]]
 
 def parse_receipt(
         raw_receipt: str

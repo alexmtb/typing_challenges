@@ -1,6 +1,6 @@
 # from constants import ___
 
-def is_name_male(name: str, name_gender_map: dict[str, bool]) -> None | bool:
+def is_name_male(name: str, name_gender_map: dict[str, bool]) -> bool | None:
     """Check name's gender."""
     return name_gender_map.get(name, None)
 
